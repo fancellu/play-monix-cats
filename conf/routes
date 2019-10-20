@@ -1,0 +1,30 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Monix Task examples
+
+GET     /eager                      controllers.MonixController.eager
+GET     /parallel                   controllers.MonixController.parallel
+GET     /sequence                   controllers.MonixController.sequence
+GET     /gather                     controllers.MonixController.gather
+GET     /gatherunordered            controllers.MonixController.gatherunordered
+GET     /racemany                   controllers.MonixController.racemany
+
+# Circe+Monix examples
+
+GET     /circe                      controllers.CirceController.index
+GET     /circe/randomimage          controllers.CirceController.randomimage(breed: Option[String])
+GET     /circe/randomimagex2        controllers.CirceController.randomimagex2
+
+### PlayJson+Monix examples
+
+GET     /playjson                   controllers.PlayController.index
+GET     /playjson/randomimage       controllers.PlayController.randomimage(breed: Option[String])
+GET     /playjson/randomimagex2     controllers.PlayController.randomimagex2
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+      

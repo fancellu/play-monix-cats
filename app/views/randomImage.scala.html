@@ -1,0 +1,14 @@
+@(randomImage: RandomImage)
+
+@main("Random dog image") {
+ <div style="text-align: center;">
+ Random dog image from https://dog.ceo/dog-api/<BR/><BR/>
+
+  @if(randomImage.status=="success"){
+    <img src="@randomImage.message" style="max-width: 95%; height: auto;" alt="FYI, image alt text is required" />
+    } else {
+    <span>@randomImage.message</span>
+  }
+
+ </div>
+}
